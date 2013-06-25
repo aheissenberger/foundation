@@ -1,7 +1,5 @@
 <?php namespace Aheissenberger\Foundation;
 
-use Aheissenberger\Foundation\SetupCommand;
-use Aheissenberger\Foundation\DemoCommand;
 use Illuminate\Support\ServiceProvider;
 
 class FoundationServiceProvider extends ServiceProvider {
