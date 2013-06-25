@@ -1,6 +1,6 @@
-## Laravel 4 zurb foundation 4.x helper
+# Laravel 4 zurb foundation 4.x helper
 
-zurb foundation 4 css framework for laravel 4 framework
+This package does not include the framework. It requires the official framework composer package from zurb and provides command line tools to setup foundation for development with laravel and compass.
 
 
 ## Installation
@@ -30,7 +30,7 @@ Run `$ php artisan asset:publish aheissenberger/foundation` to copy all needed J
 Open directory `/app/scss` in terminal an run `$ composer watch .`
 This will create and update `/public/css/app.css`
 
-# Optional:
+### Optional:
 Run `$ php artisan foundation:demo` to create a demofile /foundation.html of all foundation features in /public
 
 
