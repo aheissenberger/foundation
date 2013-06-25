@@ -38,7 +38,7 @@ class DemoCommand extends Command {
             $templpath = base_path() . '/workbench/aheissenberger/foundation';
         }
         copy($templpath . '/templates/foundation-demo.html',public_path() . '/foundation-demo.html');
-
+        $this->info('add foundation.html to '.public_path());
     }
 
 

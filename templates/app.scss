@@ -1,5 +1,5 @@
 // Global Foundation Settings
-//@import "settings";
+@import "settings";
 
 // Comment out this import if you don't want to use normalize
 @import "../../vendor/zurb/foundation/scss/normalize";
@@ -46,3 +46,4 @@
 // @import "../../vendor/zurb/foundation/scss/foundation/components/tooltips";
 // @import "../../vendor/zurb/foundation/scss/foundation/components/dropdown";
 
+@import "main";

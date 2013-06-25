@@ -34,7 +34,7 @@ class SetupCommand extends Command {
     {
         if (!file_exists(app_path() . '/scss')) {
             mkdir(app_path() . '/scss');
-            $this->info('created directory: /app/scss');
+            $this->info('created directory: '.app_path().'/scss');
         }
         $templpath = base_path() . '/vendor/aheissenberger/foundation';
         $is_workbench=!file_exists($templpath);
@@ -43,17 +43,17 @@ class SetupCommand extends Command {
         }
         $cfgreplace = true;
         if (file_exists(app_path() . '/scss'.'/app.scss')) {
-            $cfgreplace = $this->confirm('Do you want to replace /app/config.rb [y/n]? ', false);
+            $cfgreplace = $this->confirm('Do you want to replace '.app_path().'/config.rb [y/n]? ', false);
         }
         if ($cfgreplace) {
 
             copy($templpath . '/templates/config.rb',app_path() . '/scss'.'/config.rb');
-            $this->info('copy config.rb to /app/scss');
+            $this->info('copy config.rb to '.app_path().'/scss');
         }
 
         $appreplace = true;
         if (file_exists(app_path() . '/scss'.'/app.scss')) {
-            $appreplace = $this->confirm('Do you want to replace /app/scss/app.css [y/n]? ', false);
+            $appreplace = $this->confirm('Do you want to replace '.app_path().'/scss/app.css [y/n]? ', false);
         }
         if ($appreplace) {
             if (!$is_workbench) {
@@ -61,31 +61,49 @@ class SetupCommand extends Command {
             } else {
                 file_put_contents(app_path() . '/scss'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/app.scss')));
             }
-            $this->info('copy app.scss to /app/scss');
+            $this->info('copy app.scss to '.app_path().'/scss');
+        }
+
+        $sereplace = true;
+        if (file_exists(app_path() . '/scss'.'/_settings.scss')) {
+            $sereplace = $this->confirm('Do you want to replace '.app_path().'/scss/_settings.css [y/n]? ', false);
+        }
+        if ($sereplace) {
+                copy($templpath . '/templates/_settings.scss',app_path() . '/scss'.'/_settings.scss');
+            $this->info('copy _settings.scss to '.app_path().'/scss');
+        }
+
+        $sereplace = true;
+        if (file_exists(app_path() . '/scss'.'/_main.scss')) {
+            $sereplace = $this->confirm('Do you want to replace '.app_path().'/scss/_main.css [y/n]? ', false);
+        }
+        if ($sereplace) {
+                copy($templpath . '/templates/_main.scss',app_path() . '/scss'.'/_main.scss');
+            $this->info('copy _main.scss to '.app_path().'/scss');
         }
 
         if (!file_exists(public_path() . '/css')) {
             mkdir(public_path() . '/css');
-            $this->info('created directory: /public/css');
+            $this->info('created directory: '.public_path().'/css');
         }
 
         if (!file_exists(public_path() . '/img')) {
             mkdir(public_path() . '/img');
-            $this->info('created directory: /public/img');
+            $this->info('created directory: '.public_path().'/img');
         }
-    }
 
-    /**
-     * Execute the console command.
-     *
-     * @return void
-     */
-    public function demo()
-    {
-        $templpath = base_path() . '/vendor/aheissenberger/foundation';
-        $is_workbench=!file_exists($templpath);
-        copy($templpath . '/foundation-demo.html',public_path() . '/foundation-demo.html');
-        
+        if (!file_exists(storage_path() . '/.sass-cache')) {
+            mkdir(storage_path() . '/.sass-cache');
+            $this->info('created directory: '.storage_path().'/.sass-cache');
+           
+            if (file_exists(storage_path() . '/.sass-gitignore')) {
+                $gi = file_get_contents(storage_path() . '/.gitignore');
+            } else {$gi='';}
+            if (!strpos($gi, '.sass-cache')) {
+                file_put_contents(storage_path() . '/.gitignore', $gi . "\n.sass-cache\n");
+                $this->info('add directory to .gitignore: '.storage_path().'/.sass-cache');
+            }
+        }
     }
 
 
