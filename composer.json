@@ -1,6 +1,8 @@
 {
     "name": "aheissenberger/foundation",
-    "description": "",
+    "description": "zurb foundation 4 css framework for laravel 4 framework",
+    "type": "library",
+    "keywords":"laravel,css,framework",
     "authors": [
         {
             "name": "Andreas Heissenberger",
