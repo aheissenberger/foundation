@@ -38,17 +38,16 @@ class SetupCommand extends Command {
         }
         $templpath = base_path() . '/vendor/aheissenberger/foundation';
         $is_workbench=!file_exists($templpath);
-
+        if ($is_workbench) {
+            $templpath = base_path() . '/workbench/aheissenberger/foundation';
+        }
         $cfgreplace = true;
         if (file_exists(app_path() . '/scss'.'/app.scss')) {
             $cfgreplace = $this->confirm('Do you want to replace /app/config.rb [y/n]? ', false);
         }
         if ($cfgreplace) {
-            if ($is_workbench) {
-                $templpath = base_path() . '/workbench/aheissenberger/foundation';
-            }
-            $templpath .= '/templates';
-            copy($templpath . '/config.rb',app_path() . '/scss'.'/config.rb');
+
+            copy($templpath . '/templates/config.rb',app_path() . '/scss'.'/config.rb');
             $this->info('copy config.rb to /app/scss');
         }
 
@@ -58,9 +57,9 @@ class SetupCommand extends Command {
         }
         if ($appreplace) {
             if (!$is_workbench) {
-                copy($templpath . '/app.scss',app_path() . '/scss'.'/app.scss');
+                copy($templpath . '/templates/app.scss',app_path() . '/scss'.'/app.scss');
             } else {
-                file_put_contents(app_path() . '/scss'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/app.scss')));
+                file_put_contents(app_path() . '/scss'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/app.scss')));
             }
             $this->info('copy app.scss to /app/scss');
         }

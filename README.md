@@ -18,7 +18,7 @@ Next, update Composer from Terminal
 
 Once this operation completes, the final step is to add the service provider. Open `app/config/app.php`, and add a new item to the providers array.
 
-	'Aheissenberger\Foundation\FoundationServiceProvider'
+	'Aheissenberger\Foundation\FoundationServiceProvider',
 
 
 ## Usage
