@@ -23,12 +23,14 @@ Once this operation completes, the final step is to add the service provider. Op
 
 ## Usage
 
-Run `$ php artisan foundation:setup` to create a `/app/scss directory` with a basic configuration to start
+Run `$ php artisan foundation:setup` to create a `/app/scss directory` with a basic skeleton to start
 
 Run `$ php artisan asset:publish aheissenberger/foundation` to copy all needed Javascripts to `/public`
 
 Open directory `/app/scss` in terminal an run `$ composer watch .`
 This will create and update `/public/css/app.css`
+
+You can use `/app/scss/_settings.scss` to configure foundation and `/app/scss/_main.scss` for your app specific css.
 
 ### Optional:
 Run `$ php artisan foundation:demo` to create a demofile /foundation.html of all foundation features in /public
