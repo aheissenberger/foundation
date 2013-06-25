@@ -28,7 +28,16 @@ class FoundationServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		//
+		$this->app['setup'] = $this->app->share(function($app)
+		{
+			return new SetupCommand($app);
+		});
+		$this->commands('setup');
+		$this->app['demo'] = $this->app->share(function($app)
+		{
+			return new DemoCommand($app);
+		});
+		$this->commands('demo');
 	}
 
 	/**
@@ -40,5 +49,7 @@ class FoundationServiceProvider extends ServiceProvider {
 	{
 		return array();
 	}
+
+
 
 }
