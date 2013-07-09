@@ -2,48 +2,48 @@
 @import "settings";
 
 // Comment out this import if you don't want to use normalize
-@import "../../vendor/zurb/foundation/scss/normalize";
+@import "../../../vendor/zurb/foundation/scss/normalize";
 
 // Comment out this import if you are customizing you imports below
-@import "../../vendor/zurb/foundation/scss/foundation";
+@import "../../../vendor/zurb/foundation/scss/foundation";
 //@import "compass";
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing
 
-// @import "../../vendor/zurb/foundation/scss/foundation/components/global"; // *always required
-// @import "../../vendor/zurb/foundation/scss/foundation/components/grid";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/visibility";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/block-grid";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/type";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/buttons";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/forms"; // *requires components/buttons
-// @import "../../vendor/zurb/foundation/scss/foundation/components/custom-forms"; // *requires components/buttons, components/forms
-// @import "../../vendor/zurb/foundation/scss/foundation/components/button-groups"; // *requires components/buttons
-// @import "../../vendor/zurb/foundation/scss/foundation/components/dropdown-buttons"; // *requires components/buttons
-// @import "../../vendor/zurb/foundation/scss/foundation/components/split-buttons"; // *requires components/buttons
-// @import "../../vendor/zurb/foundation/scss/foundation/components/flex-video";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/section";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/top-bar";  // *requires components/grid
-// @import "../../vendor/zurb/foundation/scss/foundation/components/orbit";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/reveal";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/joyride";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/clearing";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/alert-boxes";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/breadcrumbs";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/keystrokes";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/labels";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/inline-lists";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/pagination";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/panels";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/pricing-tables";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/progress-bars";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/side-nav";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/sub-nav";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/switch";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/magellan";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/tables";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/thumbs";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/tooltips";
-// @import "../../vendor/zurb/foundation/scss/foundation/components/dropdown";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/global"; // *always required
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/grid";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/visibility";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/block-grid";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/type";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/buttons";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/forms"; // *requires components/buttons
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/custom-forms"; // *requires components/buttons, components/forms
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/button-groups"; // *requires components/buttons
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/dropdown-buttons"; // *requires components/buttons
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/split-buttons"; // *requires components/buttons
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/flex-video";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/section";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/top-bar";  // *requires components/grid
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/orbit";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/reveal";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/joyride";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/clearing";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/alert-boxes";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/breadcrumbs";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/keystrokes";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/labels";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/inline-lists";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/pagination";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/panels";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/pricing-tables";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/progress-bars";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/side-nav";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/sub-nav";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/switch";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/magellan";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/tables";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/thumbs";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/tooltips";
+// @import "../../../vendor/zurb/foundation/scss/foundation/components/dropdown";
 
 @import "main";

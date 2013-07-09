@@ -32,9 +32,9 @@ class SetupCommand extends Command {
      */
     public function fire()
     {
-        if (!file_exists(app_path() . '/scss')) {
-            mkdir(app_path() . '/scss');
-            $this->info('created directory: '.app_path().'/scss');
+        if (!file_exists(app_path() . '/assets/sass')) {
+            mkdir(app_path() . '/assets/sass');
+            $this->info('created directory: '.app_path().'/assets/sass');
         }
         $templpath = base_path() . '/vendor/aheissenberger/foundation';
         $is_workbench=!file_exists($templpath);
@@ -42,43 +42,43 @@ class SetupCommand extends Command {
             $templpath = base_path() . '/workbench/aheissenberger/foundation';
         }
         $cfgreplace = true;
-        if (file_exists(app_path() . '/scss'.'/app.scss')) {
+        if (file_exists(app_path() . '/assets/sass'.'/app.scss')) {
             $cfgreplace = $this->confirm('Do you want to replace '.app_path().'/config.rb [y/n]? ', false);
         }
         if ($cfgreplace) {
 
-            copy($templpath . '/templates/config.rb',app_path() . '/scss'.'/config.rb');
-            $this->info('copy config.rb to '.app_path().'/scss');
+            copy($templpath . '/templates/config.rb',app_path() . '/assets/sass'.'/config.rb');
+            $this->info('copy config.rb to '.app_path().'/assets/sass');
         }
 
         $appreplace = true;
-        if (file_exists(app_path() . '/scss'.'/app.scss')) {
-            $appreplace = $this->confirm('Do you want to replace '.app_path().'/scss/app.css [y/n]? ', false);
+        if (file_exists(app_path() . '/assets/sass'.'/app.scss')) {
+            $appreplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/app.css [y/n]? ', false);
         }
         if ($appreplace) {
             if (!$is_workbench) {
-                copy($templpath . '/templates/app.scss',app_path() . '/scss'.'/app.scss');
+                copy($templpath . '/templates/app.scss',app_path() . '/assets/sass'.'/app.scss');
             } else {
-                file_put_contents(app_path() . '/scss'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/app.scss')));
+                file_put_contents(app_path() . '/assets/sass'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/app.scss')));
             }
-            $this->info('copy app.scss to '.app_path().'/scss');
+            $this->info('copy app.scss to '.app_path().'/assets/sass');
         }
 
         $sereplace = true;
-        if (file_exists(app_path() . '/scss'.'/_settings.scss')) {
-            $sereplace = $this->confirm('Do you want to replace '.app_path().'/scss/_settings.css [y/n]? ', false);
+        if (file_exists(app_path() . '/assets/sass'.'/_settings.scss')) {
+            $sereplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/_settings.css [y/n]? ', false);
         }
         if ($sereplace) {
-                copy($templpath . '/templates/_settings.scss',app_path() . '/scss'.'/_settings.scss');
-            $this->info('copy _settings.scss to '.app_path().'/scss');
+                copy($templpath . '/templates/_settings.scss',app_path() . '/assets/sass'.'/_settings.scss');
+            $this->info('copy _settings.scss to '.app_path().'/assets/sass');
         }
 
         $sereplace = true;
-        if (file_exists(app_path() . '/scss'.'/_main.scss')) {
-            $sereplace = $this->confirm('Do you want to replace '.app_path().'/scss/_main.css [y/n]? ', false);
+        if (file_exists(app_path() . '/assets/sass'.'/_main.scss')) {
+            $sereplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/_main.css [y/n]? ', false);
         }
         if ($sereplace) {
-                copy($templpath . '/templates/_main.scss',app_path() . '/scss'.'/_main.scss');
+                copy($templpath . '/templates/_main.scss',app_path() . '/assets/sass'.'/_main.scss');
             $this->info('copy _main.scss to '.app_path().'/scss');
         }
 

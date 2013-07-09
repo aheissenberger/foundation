@@ -4,13 +4,13 @@
 
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "../../public/css"
+css_dir = "../../../public/css"
 sass_dir = "."
-images_dir = "../../public/img"
+images_dir = "../../../public/img"
 http_images_path = "../images"
 http_generated_images_path = "../img"
-javascripts_dir = "../../public/js"
-cache_dir = "../../storage/.sass-cache"
+javascripts_dir = "../../../public/js"
+cache_dir = "../../../storage/.sass-cache"
 # sass_options = {:cache_location => "storage/sass-cache"}
 
 # You can select your preferred output style here (can be overridden via the command line):
