@@ -12,6 +12,7 @@ http_generated_images_path = "../img"
 javascripts_dir = "../../../public/js"
 cache_dir = "../../../storage/.sass-cache"
 # sass_options = {:cache_location => "storage/sass-cache"}
+sass_options = {:sourcemap => true}
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed
