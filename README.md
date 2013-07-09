@@ -21,20 +21,22 @@ Once this operation completes, the final step is to add the service provider. Op
 	'Aheissenberger\Foundation\FoundationServiceProvider',
 
 
-## Usage
+## Setup
 
-Run `$ php artisan foundation:setup` to create a `/app/scss directory` with a basic skeleton to start
+Run `$ php artisan foundation:setup` to create a `/app/assets/sass directory` with a basic skeleton to start
 
 Run `$ php artisan asset:publish aheissenberger/foundation` to copy all needed Javascripts to `/public`
-
-Open directory `/app/scss` in terminal an run `$ composer watch .`
-This will create and update `/public/css/app.css`
-
-You can use `/app/scss/_settings.scss` to configure foundation and `/app/scss/_main.scss` for your app specific css.
 
 ### Optional:
 Run `$ php artisan foundation:demo` to create a demofile /foundation.html of all foundation features in /public
 
+## Usage
+
+In terminal an run `$ compass watch app/assets/sass`
+This will create and update `/public/css/app.css`
+
+You can use `/app/assets/sass/_settings.scss` to configure foundation and `/app/assets/sass/_main.scss` for your app specific css.
+And to remove compression by compass change settings in `/app/assets/sass/config.rb`
 
 ## Update
 
