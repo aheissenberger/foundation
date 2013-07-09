@@ -33,7 +33,7 @@ class SetupCommand extends Command {
     public function fire()
     {
         if (!file_exists(app_path() . '/assets/sass')) {
-            mkdir(app_path() . '/assets/sass',0,true);
+            mkdir(app_path() . '/assets/sass',0777,true);
             $this->info('created directory: '.app_path().'/assets/sass');
         }
         $templpath = base_path() . '/vendor/aheissenberger/foundation';
