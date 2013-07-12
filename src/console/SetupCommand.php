@@ -57,7 +57,7 @@ class SetupCommand extends Command {
 
         $appreplace = true;
         if (file_exists(app_path() . '/assets/sass'.'/app.scss')) {
-            $appreplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/app.css [y/n]? ', false);
+            $appreplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/app.scss [y/n]? ', false);
         }
         if ($appreplace) {
             if (!$is_workbench) {
@@ -66,6 +66,19 @@ class SetupCommand extends Command {
                 file_put_contents(app_path() . '/assets/sass'.'/app.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/app.scss')));
             }
             $this->info('copy app.scss to '.app_path().'/assets/sass');
+        }
+
+        $appreplace = true;
+        if (file_exists(app_path() . '/assets/sass'.'/normalize.scss')) {
+            $appreplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/normalize.scss [y/n]? ', false);
+        }
+        if ($appreplace) {
+            if (!$is_workbench) {
+                copy($templpath . '/templates/normalize.scss',app_path() . '/assets/sass'.'/normalize.scss');
+            } else {
+                file_put_contents(app_path() . '/assets/sass'.'/normalize.scss', str_replace('vendor','workbench',file_get_contents($templpath . '/templates/normalize.scss')));
+            }
+            $this->info('copy normalize.scss to '.app_path().'/assets/sass');
         }
 
         $sereplace = true;
