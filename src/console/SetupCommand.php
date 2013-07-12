@@ -67,7 +67,7 @@ class SetupCommand extends Command {
             }
             $this->info('copy app.scss to '.app_path().'/assets/sass');
         }
-
+/*
         $appreplace = true;
         if (file_exists(app_path() . '/assets/sass'.'/normalize.scss')) {
             $appreplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/normalize.scss [y/n]? ', false);
@@ -80,7 +80,7 @@ class SetupCommand extends Command {
             }
             $this->info('copy normalize.scss to '.app_path().'/assets/sass');
         }
-
+*/
         $sereplace = true;
         if (file_exists(app_path() . '/assets/sass'.'/_settings.scss')) {
             $sereplace = $this->confirm('Do you want to replace '.app_path().'/assets/sass/_settings.css [y/n]? ', false);
