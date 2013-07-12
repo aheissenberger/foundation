@@ -40,6 +40,18 @@ class SetupCommand extends Command {
             mkdir(app_path() . '/assets/sass');
             $this->info('created directory: '.app_path().'/assets/sass');
         }
+        if (!file_exists(app_path() . '/assets/sprites')) {
+            mkdir(app_path() . '/assets/sprites');
+            $this->info('created directory: '.app_path().'/assets/sprites');
+        }
+        if (!file_exists(app_path() . '/assets/img')) {
+            mkdir(app_path() . '/assets/img');
+            $this->info('created directory: '.app_path().'/assets/img');
+        }
+        if (!file_exists(app_path() . '/assets/js')) {
+            mkdir(app_path() . '/assets/js');
+            $this->info('created directory: '.app_path().'/assets/js');
+        }
         $templpath = base_path() . '/vendor/aheissenberger/foundation';
         $is_workbench=!file_exists($templpath);
         if ($is_workbench) {

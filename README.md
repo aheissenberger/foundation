@@ -23,7 +23,13 @@ Once this operation completes, the final step is to add the service provider. Op
 
 ## Setup
 
-Run `$ php artisan foundation:setup` to create a `/app/assets/sass directory` with a basic skeleton to start
+Run `$ php artisan foundation:setup` to create a basic skeleton to start:
+
+	app/assets
+		/sass
+		/sprites
+		/js
+		/img
 
 Run `$ php artisan asset:publish aheissenberger/foundation` to copy all needed Javascripts to `/public`
 
